@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
     <title>Calculador de direçao eletromagnetismo</title>
     <link rel="stylesheet" href="./main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -63,46 +63,54 @@
             </tr>
             <tbody class="d-none" id="advancedmode">
                 <tr>
-                    <td class="">
-                        <span class="text-center d-block w-100">X</span> <input class="form-control d-inline">
+                    <td>
+                        <span class="text-center d-block w-100">X</span> <input id="forcax" class="form-control d-inline">
                     </td>
-                    <td class="">
-                        <span class="text-center d-block w-100">X</span> <input class="form-control d-inline">
+                    <td>
+                        <span class="text-center d-block w-100">X</span> <input id="campox" class="form-control d-inline">
                     </td>
-                    <td class="">
-                        <span class="text-center d-block w-100">X</span> <input class="form-control d-inline">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="">
-                        <span class="text-center d-block w-100">Y</span> <input class="form-control d-inline">
-                    </td>
-                    <td class="">
-                        <span class="text-center d-block w-100">Y</span> <input class="form-control d-inline">
-                    </td>
-                    <td class="">
-                        <span class="text-center d-block w-100">Y</span> <input class="form-control d-inline">
+                    <td>
+                        <span class="text-center d-block w-100">X</span> <input id="velocidadex" class="form-control d-inline">
                     </td>
                 </tr>
                 <tr>
-                    <td class="">
-                        <span class="text-center d-block w-100">Z</span> <input class="form-control d-inline">
+                    <td>
+                        <span class="text-center d-block w-100">Y</span> <input id="forcay" lass="form-control d-inline">
                     </td>
-                    <td class="">
-                        <span class="text-center d-block w-100">Z</span> <input class="form-control d-inline">
+                    <td>
+                        <span class="text-center d-block w-100">Y</span> <input id="campoy" class="form-control d-inline">
                     </td>
-                    <td class="">
-                        <span class="text-center d-block w-100">Z</span> <input class="form-control d-inline">
+                    <td>
+                        <span class="text-center d-block w-100">Y</span> <input id="velocidadey" class="form-control d-inline">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="text-center d-block w-100">Z</span> <input id="forcaz" class="form-control d-inline">
+                    </td>
+                    <td>
+                        <span class="text-center d-block w-100">Z</span> <input id="campoz" class="form-control d-inline">
+                    </td>
+                    <td>
+                        <span class="text-center d-block w-100">Z</span> <input id="velocidadez" class="form-control d-inline">
                     </td>
                 </tr>
             </tbody>
         </table>
         <br>
 
-        <button type="button" class="btn btn-primary">Calcular</button>
-        <div>
-            <p>Resultado:</p>
-            <p><span id="nomeresult"></span><span></span id="dirresult"><span></p>
+        <div class="alert alert-danger d-none" id="erroralert">
+           <span id="errormsg"></span> 
+        </div>
+        <button id="calcbtn" type="button" class="btn btn-primary">Calcular</button>
+        <div class="w-100">
+            <h1>Resultado:</h1>
+            <p>
+                <span class="fw-bold">Vetor a ser calculado:</span> <span id="nomeresult"></span><br>
+                <span class="fw-bold">Sentido:</span> <span id="dirresult"></span ><br>
+                <span class="fw-bold">Vetor:</span> <span id="vectorresult"></span>
+
+            </p>
         </div>
     </form>
 
