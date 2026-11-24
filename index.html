@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculador de direçao eletromagnetismo</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <form>
+        <img src="image.png">
+        <table>
+            <thead>
+                <td>
+                    <label for="forca">Direção da força</label>
+                </td>
+                <td>
+                    <label for="campo">Direção densidade campo magnético</label>
+                </td>
+                <td>
+                    <label for="velocidace">Direção velocidade</label>
+                </td>
+            </thead>
+            <tr>
+                <td>
+                    <select id="forca" name="forca">
+                        <option value="cima">Cima</option>
+                        <option value="baixo">Baixo</option>
+                        <option value="esquerda">Esquerda</option>
+                        <option value="direita" >Direita</option>
+                        <option value="frente">Frente</option>
+                        <option value="tras">Trás</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="campo" name="campo">
+                        <option value="cima">Cima</option>
+                        <option value="baixo">Baixo</option>
+                        <option value="esquerda">Esquerda</option>
+                        <option value="direita" >Direita</option>
+                        <option value="frente">Frente</option>
+                        <option value="tras">Trás</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="velocidade" name="velocidade">
+                        <option value="cima">Cima</option>
+                        <option value="baixo">Baixo</option>
+                        <option value="esquerda">Esquerda</option>
+                        <option value="direita" >Direita</option>
+                        <option value="frente">Frente</option>
+                        <option value="tras">Trás</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <button type="button">Calcular</button>
+        <div>
+            <p>Resultado:</p>
+            <p><span id="nomeresult"></span><span></span id="dirresult"><span></p>
+        </div>
+    </form>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 30em;
+}
+
+
+table{
+    margin-top: 1.5em;
+    border: 1px black dashed;
+}
