@@ -49,6 +49,14 @@ const direcoes= {
     "tras":new vector3(0,0,1)
 }
 
+const direcoesPRINT= {
+    "Cima": new vector3(0,1,0),
+    "Baixo": new vector3(0,-1,0),
+    "Esquerda":new vector3(-1,0,0),
+    "Direita":new vector3(1,0,0),
+    "Frente":new vector3(0,0,-1),
+    "Trás":new vector3(0,0,1)
+}
 const getnamefromdir = dir=>{
     const rdir = dir.round()
     for(const [nome,d] of Object.entries(direcoes)){
@@ -58,6 +66,14 @@ const getnamefromdir = dir=>{
     }
 }
 
+const getprintnamefromdir = dir=>{
+    const rdir = dir.round()
+    for(const [nome,d] of Object.entries(direcoesPRINT)){
+        if(rdir.equals(d)){
+            return nome
+        }
+    }
+}
 const getdirfromname = name=>{
     return direcoes[name]
 }
@@ -123,7 +139,7 @@ calcbtn.addEventListener("click",(e)=>{
         result = result.multiply_scalar(-1)
     } 
 
-    const resultname = getnamefromdir(result)
+    const resultname = getprintnamefromdir(result)
     nomeresult.textContent=order.x.id
     dirresult.textContent = resultname ?? "Nome indefinido" 
     vectorresult.textContent = result.toString() 
