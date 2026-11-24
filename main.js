@@ -135,8 +135,21 @@ const errromsg = document.getElementById("errormsg")
 function updateWarning(){
     const order = getorder()
     if(order.isvalid){
-       erroralert.classList.add("d-none") 
-    }else{
+        let vec1 = order.order[0]
+        let vec2 = order.order[1]    
+
+        let dir1 = getdirfromname(vec1.value) 
+        let dir2 = getdirfromname(vec2.value) 
+        let result = dir1.left_hand_cross(dir2)
+
+        if(result.equals(new vector3(0,0,0)) ){
+            erroralert.classList.remove("d-none")
+            errromsg.textContent="Vetores inválidos selecionados!"
+        }else{
+            erroralert.classList.add("d-none") 
+        }
+    
+    } else{
         erroralert.classList.remove("d-none")
         errromsg.textContent="Formato inválido inserido: " + (order.x ? "Duas ou mais incógnitas!" : "Nenhuma incógnita!")
     }
